@@ -1,8 +1,13 @@
 
 import {TextInput,View, StyleSheet } from 'react-native'
 import Pbuttons from '../components/Pbuttons'
+import { useState } from 'react'
 
 export default function StartGameScreen() {
+    const [userInput, setUserInput] = useState('')
+    function userInputHandler(enteredText){
+        setUserInput(enteredText)
+    }
   return (
     <View style={styles.inputContainer}>
         <TextInput 
@@ -11,13 +16,14 @@ export default function StartGameScreen() {
         keyboardType='number-pad'
         autoCapitalize='none'
         autoCorrect={false}
+        onChangeText={userInputHandler}
         />
+        <View style={styles.buttonsContainer}>
         <View style={styles.buttonContainer}>
-        <View>
-        <Pbuttons>Reset</Pbuttons>
-        </View>
-        <View>
         <Pbuttons>Confirm</Pbuttons>
+        </View>
+        <View style={styles.buttonContainer}>
+        <Pbuttons>Reset</Pbuttons>
         </View>
         </View>
         
@@ -53,7 +59,10 @@ const styles = StyleSheet.create({
              fontWeight: 'bold',
              textAlign: 'center',
     },
-    buttonContainer:{
+    buttonsContainer:{
         flexDirection: 'row'
+    },
+    buttonContainer:{
+        flex: 1,
     }
 })
