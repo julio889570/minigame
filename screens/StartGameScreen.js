@@ -8,6 +8,9 @@ export default function StartGameScreen() {
     function userInputHandler(enteredText){
         setUserInput(enteredText)
     }
+    function conFirmInputHandler(){
+
+    }
   return (
     <View style={styles.inputContainer}>
         <TextInput 
@@ -17,10 +20,11 @@ export default function StartGameScreen() {
         autoCapitalize='none'
         autoCorrect={false}
         onChangeText={userInputHandler}
+        value ={userInput}
         />
         <View style={styles.buttonsContainer}>
         <View style={styles.buttonContainer}>
-        <Pbuttons>Confirm</Pbuttons>
+        <Pbuttons onPress={conFirmInputHandler}>Confirm</Pbuttons>
         </View>
         <View style={styles.buttonContainer}>
         <Pbuttons>Reset</Pbuttons>

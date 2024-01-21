@@ -1,15 +1,12 @@
 import {View, Text, Pressable, StyleSheet} from 'react-native'
 
-export default function Pbuttons({children}) {
-    function handlePress(){
-        console.log('pressed')
-    }
+export default function Pbuttons({children, onPress}) {
   return (
     
      <View style ={styles.buttonOuterContainer}>
     <Pressable
      style={styles.buttonInnerContainer}
-     onPress={handlePress}
+     onPress={onPress}
      android_ripple={{color: 'yellow'}}>
     <Text style={styles.buttonText}>{children}</Text>
     </Pressable>
