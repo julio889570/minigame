@@ -1,6 +1,7 @@
 import {View, Text, Pressable, StyleSheet} from 'react-native'
 
 export default function Pbuttons({children, onPress}) {
+    
   return (
     
      <View style ={styles.buttonOuterContainer}>
