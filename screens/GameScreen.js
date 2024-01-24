@@ -1,8 +1,8 @@
- import React from 'react'
+import {text} from 'react-native'
  
  export default function GameScreen() {
    return (
-     <div>GameScreen</div>
+     <View>GameScreen</View>
    )
  }
  
