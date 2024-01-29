@@ -23,7 +23,9 @@ export default function App() {
        
        >
         {screen}
+        
         </ImageBackground>
+       
     </LinearGradient>
   );
 }
