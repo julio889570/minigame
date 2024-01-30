@@ -5,6 +5,7 @@ export default function Pbuttons({children, onPress}) {
   return (
     
      <View style ={styles.buttonOuterContainer}>
+        <Text>hello</Text>
     <Pressable
      style={styles.buttonInnerContainer}
      onPress={onPress}
