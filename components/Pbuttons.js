@@ -13,8 +13,6 @@ export default function Pbuttons({children, onPress}) {
     <Text style={styles.buttonText}>{children}</Text>
     </Pressable>
     </View>
-    
-    
   )
   
 }
